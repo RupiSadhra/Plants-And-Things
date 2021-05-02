@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: inherit;
+  line-height: 1.6;
+  word-spacing: 0.1rem;
+  color: #606060;
+}
+
+.highlight-text {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.container-width {
+  width: 80%;
+  margin: auto;
+}
+
+.container-width-extra {
+  width: 60%;
+  margin: auto;
+}
+
+.margin-top {
+  margin-top: 5rem;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.button-style {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #8bdf83;
+  border: 2px solid #3f6660;
+  border-radius: 0.12rem;
+  padding: 0.6rem 1.5rem;
+  text-transform: uppercase;
+  margin: 1.5rem 2rem 0 0;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000;
+  transition: background-color 0.5s ease-in;
+}
+
+.button-style:hover {
+  background-color: #3f6660;
+  color: #fff;
+}
+
+.button-style-reverse {
+  border: 2px solid #3f6660;
+  color: #000;
+  background-color: inherit;
+}
+
+/* header */
+
+header {
+  height: 50vh;
+  background-image: url("../images/hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: -3%;
+  left: 2%;
+  width: 10rem;
+  max-height: 10rem;
+  object-fit: contain;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 2rem;
+  min-height: 2rem;
+  cursor: pointer;
+}
+
+.hamburger-lines {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 3px;
+  background-color: #fefffe;
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 0.12rem;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  color: #fefffe;
+}
+
+.menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3f6660;
+  color: #fefffe;
+  z-index: 999;
+}
+
+.menu-container i {
+  position: absolute;
+  font-size: 2rem;
+  color: #fefffe;
+  cursor: pointer;
+  top: 2%;
+  right: 4%;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-menu {
+  display: block;
+}
+
+.hide-menu {
+  display: none;
+}
+
+.hamburger-navigation {
+  padding: 0;
+  list-style-type: none;
+}
+
+.hamburger-navigation a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2rem;
+  color: #fefffe;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* desktop menu */
+.desktop-menu {
+  display: none;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+}
+
+.desktop-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+}
+
+.desktop-navigation a {
+  text-decoration: none;
+  color: #fefffe;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* footer */
+footer {
+  background-color: #3f6660;
+  width: 100%;
+  min-height: 30vh;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation-links a {
+  color: #fefffe;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.footer-heading {
+  color: #fefffe;
+}
+.footer-links {
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .desktop-menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
